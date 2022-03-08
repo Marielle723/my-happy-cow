@@ -1,38 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* HEADER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: red solid 3px;
+  height: 10vh;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right img {
+  width: 30px;
+}
+
+.add-listing {
+  border: purple solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.login {
+  background-color: purple;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* BANNER */
+.banner {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  height: 45vh;
+  width: 100%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner input {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.banner-search-icon img {
+  width: 20px;
+  background-color: purple;
+  padding: 10px;
+}
+
+/* FOODLIST */
+
+.foodList {
+  width: 100%;
+  border: solid black 3px;
+}
+
+.foodList-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardList {
+  border: blue solid 3px;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  overflow: hidden;
+  overflow-x: scroll;
+}
+/* CARD */
+
+.card {
+  width: 20%;
+  border: solid rosybrown 3px;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 20px;
+}
+
+.thumbnail {
+  width: 100%;
+  position: relative;
+}
+
+.favori-heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
 }

@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
 
 html {
   --line-h: 16px;
@@ -36,7 +38,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: red solid 3px;
+  /* border: red solid 3px; */
   height: 10vh;
 }
 
@@ -49,19 +51,39 @@ html {
   width: 100px;
 }
 
-nav {
+.header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-ul {
+.header ul {
   display: flex;
+}
+
+.header li {
+  font-size: 12px;
+  line-height: 24px;
+  color: #616161;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.header li:hover {
+  background-color: #7c4ec4;
+  text-decoration: underline;
+  color: white;
+  font-weight: bolder;
 }
 
 .header-right {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.header p {
+  font-size: 12px;
 }
 
 .header-right img {
@@ -69,15 +91,21 @@ ul {
 }
 
 .add-listing {
-  border: purple solid 1px;
+  border: #7c4ec4 solid 1px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
+  color: #7c4ec4;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .login {
-  background-color: purple;
-  padding: 10px;
+  background-color: #7c4ec4;
+  padding: 5px;
   border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* BANNER */
@@ -92,7 +120,10 @@ ul {
 }
 
 .banner input {
-  padding: 10px;
+  width: 500px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .banner img {
@@ -101,10 +132,31 @@ ul {
   object-position: right;
 }
 
+.banner-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .banner-search-icon img {
   width: 20px;
-  background-color: purple;
+  height: 15px;
+  background-color: #7c4ec4;
+  color: white;
   padding: 10px;
+  border-radius: 3px;
+}
+
+.banner-title {
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.banner-ref {
+  font-size: 8px;
+  margin-top: 50px;
+  margin-left: 90%;
 }
 
 /* FOODLIST */
@@ -119,6 +171,7 @@ ul {
 .foodList-title {
   display: flex;
   justify-content: space-between;
+  color: #292929;
 }
 
 .cardList {

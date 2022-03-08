@@ -5,7 +5,7 @@ import searchicon from "../assets/searchicon.svg";
 const Banner = () => {
   return (
     <div className="banner" style={{ backgroundImage: `url(${background})` }}>
-      <h1>Find Vegan Restaurants Nearby</h1>
+      <h1 className="banner-title">Find Vegan Restaurants Nearby</h1>
       <div className="banner-search-icon">
         <input
           name="search"
@@ -15,8 +15,8 @@ const Banner = () => {
           // onChange="{function}"
         />
         <img alt="magnifying glass in purple box" src={searchicon} />
-        <p>Photo by Rustic Vegan</p>
       </div>
+      <p className="banner-ref">Photo by Rustic Vegan</p>
       {/* <img className="wave-form" alt="wave form white" src={formebanner} /> */}
     </div>
   );

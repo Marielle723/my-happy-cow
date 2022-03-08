@@ -165,3 +165,35 @@ ul {
   height: 30vh;
   border: solid fuchsia 3px;
 }
+
+.vegetarian-fushia {
+  background: #8a2091;
+}
+
+.vegan-green {
+  background: #21820d;
+}
+
+.catering-blue {
+  background: #2eb3a5;
+}
+
+.ice_cream-pink {
+  background: #f04e86;
+}
+
+.veg-options-red {
+  background: #d65c5b;
+}
+
+.health_store-yellow {
+  background: #b79e12;
+}
+
+.food-truck-orange {
+  background: #ea5a2e;
+}
+
+.others-blue {
+  background: #3671be;
+}

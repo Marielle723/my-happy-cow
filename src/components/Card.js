@@ -10,6 +10,7 @@ import vegetarian from "../assets/vegIcon/category_vegetarian.svg";
 import healthstore from "../assets/vegIcon/category_health-store.svg";
 import bakery from "../assets/vegIcon/category_bakery.svg";
 import organization from "../assets/vegIcon/category_organization.svg";
+import catering from "../assets/vegIcon/category_catering.svg";
 import others from "../assets/vegIcon/category_other.svg";
 import imgreplace from "../assets/imgreplace.svg";
 import favori from "../assets/favori.png";
@@ -86,6 +87,8 @@ const Card = (props) => {
                   <img className="icon" src={bakery} alt="" />
                 ) : place.type === "Organization" ? (
                   <img className="icon" src={organization} alt="" />
+                ) : place.type === "Catering" ? (
+                  <img className="icon" src={catering} alt="" />
                 ) : (
                   <img className="icon" src={others} alt="" />
                 )}

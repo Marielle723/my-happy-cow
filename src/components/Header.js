@@ -1,5 +1,6 @@
 import logo from "../assets/logo.svg";
 import searchicon from "../assets/searchicon.svg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,7 +8,9 @@ const Header = () => {
       <div className="header">
         <div className="header-left">
           {" "}
-          <img alt="purple and white happy cow face" src={logo} />
+          <Link to="/">
+            <img alt="purple and white happy cow face" src={logo} />
+          </Link>
           <nav>
             <ul>
               <li>Explore</li>

@@ -20,7 +20,7 @@ const Home = () => {
       try {
         const response = await axios.get("https://my-happy-cow.herokuapp.com/");
         setData(response.data);
-        console.log(data);
+        // console.log(data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.message);

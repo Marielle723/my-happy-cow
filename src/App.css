@@ -1,5 +1,16 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 body {
   font-family: "Nunito", sans-serif;
+  font-weight: 800;
 }
 
 html {
@@ -124,6 +135,7 @@ html {
   height: 20px;
   padding: 5px;
   border-radius: 3px;
+  padding: 15px;
 }
 
 .banner img {
@@ -143,7 +155,7 @@ html {
   height: 15px;
   background-color: #7c4ec4;
   color: white;
-  padding: 10px;
+  padding: 15px;
   border-radius: 3px;
 }
 
@@ -151,6 +163,7 @@ html {
   font-size: 26px;
   line-height: 40px;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 .banner-ref {
@@ -162,7 +175,6 @@ html {
 /* FOODLIST */
 
 .foodList {
-  width: 100%;
   border: solid black 3px;
   width: 80vw;
   margin: 0 auto;
@@ -172,35 +184,68 @@ html {
   display: flex;
   justify-content: space-between;
   color: #292929;
+  font-weight: 800;
 }
 
 .cardList {
   border: blue solid 3px;
+  height: 80vh;
 
-  height: 70vh;
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: space-around; */
   /* align-items: center;  */
-  /* overflow: hidden; */
-  overflow-x: scroll;
+  /* overflow: hidden;
+  overflow-x: scroll; */
 }
+
 /* CARD */
 
 .card {
-  width: 25%;
+  /* width: 25%; */
   border: solid rosybrown 3px;
   flex-shrink: 0;
   position: relative;
+  font-size: 18px;
+  font-weight: 800;
+}
 
+.card-town {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.card-place-name {
+  margin-top: 10px;
   font-size: 14px;
+  color: #21820d;
+  text-decoration-line: none;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.card-rating {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.card-description {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #444;
+  font-weight: 200;
 }
 
 .icon {
   width: 20px;
 }
 
-.thumbnail {
-  width: 100%;
+.card-thumbnail {
+  width: 95%;
+  border-radius: 10px;
+  height: 45%;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 .favori-heart {

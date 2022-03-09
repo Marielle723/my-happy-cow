@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { FaStar, FaRegStar, FaStarHalf } from "react-icons/fa";
 
 import iceCream from "../assets/vegIcon/category_ice-cream.svg";
 import juiceBar from "../assets/vegIcon/category_juice-bar.svg";
@@ -29,16 +30,16 @@ const Card = (props) => {
   };
 
   const ratingStar = (num) => {
-    let rating = "";
+    let rating = [];
 
     if (typeof num === "number") {
       let numTrunc = Math.trunc(num);
       for (let i = 0; i < numTrunc; i++) {
-        rating += "★";
+        rating.push(<FaStar style={{ color: "yellow" }} />);
       }
 
       if (num - numTrunc > 0) {
-        rating += "✪";
+        rating.push(<FaRegStar style={{ color: "yellow" }} />);
       }
 
       // console.log("rating.length ==> " + rating.length);
@@ -49,7 +50,7 @@ const Card = (props) => {
 
       if (diff > 0) {
         for (let j = 0; j < diff; j++) {
-          rating += "☆";
+          rating.push(<FaStarHalf style={{ color: "yellow" }} />);
         }
       }
     } else {
@@ -66,9 +67,13 @@ const Card = (props) => {
           <div className="card" key={place.placeId}>
             <Link to={`/place/${place.placeId}`}>
               {place.thumbnail ? (
-                <img className="thumbnail" src={place.thumbnail} alt="foods" />
+                <img
+                  className="card-thumbnail"
+                  src={place.thumbnail}
+                  alt="foods"
+                />
               ) : (
-                <img className="thumbnail" src={imgreplace} alt="" /> //IMAGE BLANCHE A TROUVER COMMENT REMPLACER
+                <img className="card-thumbnail" src={imgreplace} alt="" /> //IMAGE BLANCHE A TROUVER COMMENT REMPLACER
               )}
               <div className="card-icon-name">
                 {place.type === "Veg Store" ? (
@@ -92,11 +97,11 @@ const Card = (props) => {
                 ) : (
                   <img className="icon" src={others} alt="" />
                 )}
-                <h2 className="place-name">{place.name}</h2>
+                <h2 className="card-place-name">{place.name}</h2>
               </div>
             </Link>
-            <h3>{getTown(place.address)}</h3>
-            <p>{ratingStar(place.rating)}</p>
+            <h3 className="card-town">{getTown(place.address)}</h3>
+            <p className="card-rating">{ratingStar(place.rating)}</p>
             <p className="card-description">{place.description}</p>
 
             <img

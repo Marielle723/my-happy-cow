@@ -1,9 +1,17 @@
+import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
 import Card from "./Card";
 
 const FoodList = (props) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+  };
   return (
     <div className="foodList">
       <div className="foodList-title">
@@ -12,7 +20,9 @@ const FoodList = (props) => {
       </div>
 
       <div className="cardList">
-        <Card data={props.data} />
+        <Slider {...settings}>
+          <Card data={props.data} />
+        </Slider>
       </div>
     </div>
   );

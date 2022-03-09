@@ -20,12 +20,12 @@ import LinesEllipsis from "react-lines-ellipsis";
 
 const Card = (props) => {
   const getTown = (adress) => {
-    console.log("adress==>" + adress);
+    // console.log("adress==>" + adress);
     const adressSplit = adress.split(",");
     let town = adressSplit[1];
     let country = adressSplit[2];
 
-    console.log(town + ", " + country);
+    // console.log(town + ", " + country);
     return town + ", " + country;
   };
 
@@ -105,7 +105,7 @@ const Card = (props) => {
             {/* <p className="card-description">{place.description}</p> */}
 
             <LinesEllipsis
-              text={place.description}
+              text={place.description ? place.description : "No description"}
               maxLine="3"
               ellipsis="..."
               trimRight

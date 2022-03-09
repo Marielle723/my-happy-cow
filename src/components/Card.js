@@ -18,7 +18,9 @@ import favori from "../assets/favori.png";
 
 import LinesEllipsis from "react-lines-ellipsis";
 
-const Card = (props) => {
+import Slider from "react-slick";
+
+const Card = ({ place }) => {
   const getTown = (adress) => {
     // console.log("adress==>" + adress);
     const adressSplit = adress.split(",");
@@ -62,64 +64,56 @@ const Card = (props) => {
 
   return (
     <>
-      {props.data.map((place) => {
-        return (
-          <div className="card" key={place.placeId}>
-            <Link to={`/place/${place.placeId}`}>
-              {place.thumbnail ? (
-                <img
-                  className="card-thumbnail"
-                  src={place.thumbnail}
-                  alt="foods"
-                />
-              ) : (
-                <img className="card-thumbnail" src={imgreplace} alt="" /> //IMAGE BLANCHE A TROUVER COMMENT REMPLACER
-              )}
-              <div className="card-icon-name">
-                {place.type === "Veg Store" ? (
-                  <img className="icon" src={vegStore} alt="store icon" />
-                ) : place.type === "veg-options" ? (
-                  <img className="icon" src={vegOption} alt="" />
-                ) : place.type === "Juice Bar" ? (
-                  <img className="icon" src={juiceBar} alt="drink icon" />
-                ) : place.type === "vegan" ? (
-                  <img className="icon" src={vegan} alt="" />
-                ) : place.type === "vegetarian" ? (
-                  <img className="icon" src={vegetarian} alt="" />
-                ) : place.type === "Health Store" ? (
-                  <img className="icon" src={healthstore} alt="" />
-                ) : place.type === "Bakery" ? (
-                  <img className="icon" src={bakery} alt="" />
-                ) : place.type === "Organization" ? (
-                  <img className="icon" src={organization} alt="" />
-                ) : place.type === "Catering" ? (
-                  <img className="icon" src={catering} alt="" />
-                ) : (
-                  <img className="icon" src={others} alt="" />
-                )}
-                <h2 className="card-place-name">{place.name}</h2>
-              </div>
-            </Link>
-            <h3 className="card-town">{getTown(place.address)}</h3>
-            <p className="card-rating">{ratingStar(place.rating)}</p>
-            {/* <p className="card-description">{place.description}</p> */}
-
-            <LinesEllipsis
-              text={place.description ? place.description : "No description"}
-              maxLine="3"
-              ellipsis="..."
-              trimRight
-              basedOn="letters"
-            />
-
-            <img
-              className="favori-heart"
-              src={favori}
-              alt="little pink heart in round white shape"
-            />
+      <div className="card" key={place.placeId}>
+        <Link to={`/place/${place.placeId}`}>
+          {place.thumbnail ? (
+            <img className="card-thumbnail" src={place.thumbnail} alt="foods" />
+          ) : (
+            <img className="card-thumbnail" src={imgreplace} alt="" /> //IMAGE BLANCHE A TROUVER COMMENT REMPLACER
+          )}
+          <div className="card-icon-name">
+            {place.type === "Veg Store" ? (
+              <img className="icon" src={vegStore} alt="store icon" />
+            ) : place.type === "veg-options" ? (
+              <img className="icon" src={vegOption} alt="" />
+            ) : place.type === "Juice Bar" ? (
+              <img className="icon" src={juiceBar} alt="drink icon" />
+            ) : place.type === "vegan" ? (
+              <img className="icon" src={vegan} alt="" />
+            ) : place.type === "vegetarian" ? (
+              <img className="icon" src={vegetarian} alt="" />
+            ) : place.type === "Health Store" ? (
+              <img className="icon" src={healthstore} alt="" />
+            ) : place.type === "Bakery" ? (
+              <img className="icon" src={bakery} alt="" />
+            ) : place.type === "Organization" ? (
+              <img className="icon" src={organization} alt="" />
+            ) : place.type === "Catering" ? (
+              <img className="icon" src={catering} alt="" />
+            ) : (
+              <img className="icon" src={others} alt="" />
+            )}
+            <h2 className="card-place-name">{place.name}</h2>
           </div>
-        );
-      })}
+        </Link>
+        <h3 className="card-town">{getTown(place.address)}</h3>
+        <p className="card-rating">{ratingStar(place.rating)}</p>
+        {/* <p className="card-description">{place.description}</p> */}
+
+        <LinesEllipsis
+          text={place.description ? place.description : "No description"}
+          maxLine="3"
+          ellipsis="..."
+          trimRight
+          basedOn="letters"
+        />
+
+        <img
+          className="favori-heart"
+          src={favori}
+          alt="little pink heart in round white shape"
+        />
+      </div>
     </>
   );
 };

@@ -13,31 +13,34 @@ body {
   font-weight: 800;
 }
 
-html {
+/* html {
   --line-h: 16px;
   --nth-lines-trunc: 3;
-}
+} */
 
 .card-description {
-  line-height: var(--line-h);
+  /* line-height: var(--line-h);
   max-height: calc(var(--line-h) * var(--nth-lines-trunc));
   overflow: hidden;
   width: 95%;
   position: relative;
   padding-right: 10px;
-  text-align: justify;
+  text-align: justify; */
+  font-weight: 200;
+  line-height: 24px;
 }
 
 .card-icon-name {
   display: flex;
 }
 
-.card-description::after {
+/* .card-description::after {
   content: "...";
   position: absolute;
   bottom: 0;
   right: 0;
-}
+} */
+
 .App {
   height: 100vh;
   width: 100vw;

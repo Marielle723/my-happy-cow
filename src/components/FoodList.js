@@ -8,10 +8,10 @@ export default class MultipleItems extends Component {
     // const FoodList = (props) => {
     const settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToScroll: 1,
     };
 
     return (

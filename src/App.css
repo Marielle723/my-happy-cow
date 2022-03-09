@@ -56,6 +56,14 @@ body {
   height: 10vh;
 }
 
+.header-search-icon {
+  color: #7c4ec4;
+}
+
+.header-search-icon:hover {
+  cursor: pointer;
+}
+
 .header-left {
   display: flex;
   align-items: center;
@@ -123,6 +131,7 @@ body {
 }
 
 /* BANNER */
+
 .banner {
   display: flex;
   align-items: center;
@@ -141,6 +150,13 @@ body {
   padding: 15px;
 }
 
+.banner-shape {
+  width: 100%;
+  object-position: right;
+  height: 150px;
+  margin-top: -60px;
+}
+
 .banner img {
   width: 100%;
   object-fit: cover;
@@ -153,13 +169,11 @@ body {
   justify-content: center;
 }
 
-.banner-search-icon img {
-  width: 20px;
-  height: 15px;
-  background-color: #7c4ec4;
-  color: white;
-  padding: 15px;
-  border-radius: 3px;
+.banner-search-icon-p {
+  background: #7c4ec4;
+  padding: 7px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .banner-title {
@@ -178,9 +192,11 @@ body {
 /* FOODLIST */
 
 .foodList {
-  border: solid black 3px;
+  /* border: solid black 3px; */
   width: 80vw;
   margin: 0 auto;
+  background: grey;
+  padding: 0 25px 0 25px;
 }
 
 .foodList-title {
@@ -188,10 +204,11 @@ body {
   justify-content: space-between;
   color: #292929;
   font-weight: 800;
+  font-size: 24px;
 }
 
 .cardList {
-  border: blue solid 3px;
+  /* border: blue solid 3px; */
   height: 80vh;
 
   /* display: flex;
@@ -205,11 +222,12 @@ body {
 
 .card {
   /* width: 25%; */
-  border: solid rosybrown 3px;
+  /* border: solid rosybrown 3px; */
   flex-shrink: 0;
   position: relative;
   font-size: 18px;
   font-weight: 800;
+  margin-top: 30px;
 }
 
 .card-town {

@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/place/:id" element={<Place />} />
+        <Route path="/:id" element={<Place />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

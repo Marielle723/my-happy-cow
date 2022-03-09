@@ -2,6 +2,8 @@
 import react, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import pinkwhiteshape from "../assets/pinkwhiteshape.png";
+import brown from "../assets/brown.png";
 
 /* IMPORT COMPONENTS */
 import Banner from "../components/Banner";
@@ -40,6 +42,7 @@ const Home = () => {
   ) : (
     <div>
       <Banner />
+      <img className="banner-shape" src={pinkwhiteshape} alt="white shape" />
       <FoodList data={data} />
     </div>
   );

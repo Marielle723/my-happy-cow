@@ -1,6 +1,7 @@
 import logo from "../assets/logo.svg";
 import searchicon from "../assets/searchicon.svg";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -26,7 +27,9 @@ const Header = () => {
         </div>
 
         <div className="header-right">
-          <img alt="magnifying glass" src={searchicon} />
+          <p className="header-search-icon">
+            <FaSearch />
+          </p>
           <p className="add-listing">Add Listing</p>
           <p className="login">Login / Join</p>
         </div>

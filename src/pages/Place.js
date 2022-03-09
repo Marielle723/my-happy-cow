@@ -15,7 +15,7 @@ const Place = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://my-happy-cow.herokuapp.com/place/${id}`
+        `https://my-happy-cow.herokuapp.com/${id}`
       );
       console.log(response.data);
       setData(response.data);

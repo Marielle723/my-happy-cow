@@ -16,7 +16,7 @@ import others from "../assets/vegIcon/category_other.svg";
 import imgreplace from "../assets/imgreplace.svg";
 import favori from "../assets/favori.png";
 
-// import LinesEllipsis from "react-lines-ellipsis";
+import LinesEllipsis from "react-lines-ellipsis";
 
 const Card = (props) => {
   const getTown = (adress) => {
@@ -102,7 +102,15 @@ const Card = (props) => {
             </Link>
             <h3 className="card-town">{getTown(place.address)}</h3>
             <p className="card-rating">{ratingStar(place.rating)}</p>
-            <p className="card-description">{place.description}</p>
+            {/* <p className="card-description">{place.description}</p> */}
+
+            <LinesEllipsis
+              text={place.description}
+              maxLine="3"
+              ellipsis="..."
+              trimRight
+              basedOn="letters"
+            />
 
             <img
               className="favori-heart"

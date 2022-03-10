@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Card from "./Card";
+import { FaChevronRight } from "react-icons/fa";
 
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
@@ -23,7 +24,11 @@ export default class CustomArrows extends Component {
       <div className="foodList">
         <div className="foodList-title">
           <h1>Vegan Food Near Me</h1>
-          <p>View all</p>
+          <p>
+            <span>
+              View all <FaChevronRight />
+            </span>
+          </p>
         </div>
 
         <div className="cardList">

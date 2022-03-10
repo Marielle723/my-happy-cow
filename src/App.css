@@ -206,6 +206,16 @@ body {
   padding: 0 25px 0 25px;
 }
 
+.foodList p span {
+  color: #7c4ec4;
+  font-size: 12px;
+}
+
+.foodList p span:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .foodList-title {
   display: flex;
   justify-content: space-between;

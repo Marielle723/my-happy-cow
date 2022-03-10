@@ -130,6 +130,11 @@ body {
   line-height: 24px;
 }
 
+.login:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 /* BANNER */
 
 .banner {
@@ -331,7 +336,40 @@ body {
   display: flex;
   padding: 10px;
   border-radius: 10px;
+  position: fixed;
+  background: #fff;
+  z-index: 2;
+  left: 15%;
+  top: 10%;
+
+  /* top: 0;
+  left: 0; */
+  /* width: 70%;
+  min-height: 80vh;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff; */
+}
+
+/* .popup-inner {
   position: relative;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+} */
+
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cross:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .popup-imgbg {
@@ -444,6 +482,16 @@ input {
   font-weight: 500;
 }
 
+.submit-signup:hover {
+  opacity: 0.95;
+  cursor: pointer;
+}
+
+.submit-login:hover {
+  opacity: 0.95;
+  cursor: pointer;
+}
+
 .submit-login {
   background: #7c4ec4;
   margin-top: 30px;
@@ -452,8 +500,45 @@ input {
   padding: 3px 0;
 }
 
-.cross {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* ADD LISTING */
+
+.addListing-wrapper {
+  width: 33%;
+  /* border: solid black 3px; */
+  min-height: 80vh;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+}
+
+.addListing-bg {
+  /* border: 4px solid coral; */
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addListing-wrapper p {
+  font-size: 10px;
+}
+
+.addListing-wrapper span {
+  color: #7c4ec4;
+}
+
+.addListing-wrapper span:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.addListing-bg {
+  color: white;
 }

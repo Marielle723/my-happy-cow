@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { IoMenu, IoClose } from "react-icons/io5";
 
+import Popup from "./Popup";
+
 import Dropdown from "../components/Dropdown";
 import DropdownMore from "./DropdownMore";
 
@@ -12,6 +14,7 @@ const Header = () => {
   const [menuClick, setMenuClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownMore, setDropdownMore] = useState(false);
+  const [trigger, setTrigger] = useState(false);
 
   const handleClickMenu = () => {
     setMenuClick(!menuClick);
@@ -87,10 +90,20 @@ const Header = () => {
           <p className="header-search-icon">
             <FaSearch />
           </p>
-          <p className="add-listing">Add Listing</p>
-          <Link to="/popup">
-            <p className="login">Login / Join</p>
+          <Link to="/addListing">
+            <p className="add-listing">Add Listing</p>
           </Link>
+
+          <p
+            className="login"
+            onClick={() => {
+              setTrigger(true);
+            }}
+          >
+            Login / Join
+          </p>
+
+          <Popup trigger={trigger} setTrigger={setTrigger} />
         </div>
       </div>
     </>

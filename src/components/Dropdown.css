@@ -15,6 +15,7 @@
   text-align: start;
   font-weight: 200;
   border: solid pink 3px;
+  z-index: 3;
 }
 
 .dropdown-menu li {

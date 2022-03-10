@@ -6,14 +6,14 @@ import Login from "./Login";
 import loginbg from "../assets/login-social.jpg";
 import { IoClose } from "react-icons/io5";
 
-function Popup() {
+function Popup(props) {
   const [login, setLogin] = useState(true);
   const [signup, setSignup] = useState(false);
   const [close, setClose] = useState(false);
 
-  return (
+  return props.trigger ? (
     <div className="popup-wrapper">
-      <IoClose className="cross" />
+      <IoClose className="cross" onClick={() => props.setTrigger(false)} />
       <div
         className="popup-imgbg"
         style={{ backgroundImage: `url(${loginbg})` }}
@@ -53,6 +53,8 @@ function Popup() {
         {login ? <Login /> : signup ? <Signup /> : <Login />}
       </div>
     </div>
+  ) : (
+    ""
   );
 }
 

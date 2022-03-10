@@ -30,7 +30,6 @@ export default class CustomArrows extends Component {
           <Slider {...settings}>
             {this.props.data.map((place) => {
               return <Card place={place} />;
-              //code a rajouter?
             })}
           </Slider>
         </div>

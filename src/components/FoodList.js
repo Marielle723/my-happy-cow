@@ -3,7 +3,10 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Card from "./Card";
 
-export default class MultipleItems extends Component {
+import SampleNextArrow from "./SampleNextArrow";
+import SamplePrevArrow from "./SamplePrevArrow";
+
+export default class CustomArrows extends Component {
   render(props) {
     // const FoodList = (props) => {
     const settings = {
@@ -12,6 +15,8 @@ export default class MultipleItems extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
     };
 
     return (

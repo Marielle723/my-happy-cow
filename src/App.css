@@ -323,13 +323,15 @@ body {
 
 .popup-wrapper {
   width: 70%;
-  border: solid black 3px;
-  min-height: 85vh;
+  /* border: solid black 3px; */
+  min-height: 80vh;
+  max-height: 90vh;
   margin: 0 auto;
   margin-top: 10px;
   display: flex;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
+  position: relative;
 }
 
 .popup-imgbg {
@@ -337,12 +339,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .popup-form {
-  padding: 5px;
-  background: pink;
+  /* background: pink; */
   padding: 10px 20px 10px 20px;
+  min-width: 55%;
+  min-height: 80vh;
 }
 
 .popup-title {
@@ -359,7 +365,7 @@ body {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-  color: #444;
+  color: #292929;
 }
 
 .popup-log:hover {
@@ -374,4 +380,80 @@ body {
   text-decoration: underline;
   cursor: pointer;
   color: #7c4ec4;
+}
+
+/* LOGIN / SIGNUP */
+
+.login-signup-wrapper {
+  /* border: solid crimson 2px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #292929;
+  margin-top: 15px;
+  font-size: 14px;
+  max-height: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.social img {
+  width: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-signup-wrapper p {
+  color: #616161;
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 24px;
+}
+
+.mem-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+input {
+  margin-top: 5px;
+  padding-right: 150px;
+  outline: none;
+}
+
+.submit-signup {
+  background: #7c4ec4;
+  padding: 3px 0;
+  margin-top: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+.submit-login {
+  background: #7c4ec4;
+  margin-top: 30px;
+  color: white;
+  font-weight: 500;
+  padding: 3px 0;
+}
+
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }

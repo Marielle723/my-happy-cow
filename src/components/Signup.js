@@ -5,6 +5,8 @@ import facebook from "../assets/social/facebook.png";
 import google from "../assets/social/google.png";
 import apple from "../assets/social/apple.png";
 
+import { IoClose } from "react-icons/io5";
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -18,7 +20,7 @@ function Signup() {
   };
 
   return (
-    <div className="signup-wrapper">
+    <div className="login-signup-wrapper">
       <div className="social">
         <img src={facebook} alt="blue f letter-facebook logo" />
         <img src={google} alt="multicolored g letter-google logo" />
@@ -31,8 +33,7 @@ function Signup() {
         }}
       >
         <label>
-          {" "}
-          Email
+          Email <br />
           <input
             type="email"
             placeholder="Email"
@@ -44,7 +45,7 @@ function Signup() {
         </label>
 
         <label>
-          Username
+          Username <br />
           <input
             type="text"
             placeholder="Username"
@@ -75,7 +76,7 @@ function Signup() {
           </label>
           <p>Forgot Password?</p>
         </div>
-        <input type="submit" value="Next" />
+        <input className="submit-signup" type="submit" value="Next" />
       </form>
     </div>
   );

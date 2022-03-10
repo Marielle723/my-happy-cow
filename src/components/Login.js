@@ -19,52 +19,51 @@ function Login() {
   };
 
   return (
-    <div className="login-wrapper">
-      <div className="login-container">
-        <div className="social">
-          <img src={facebook} alt="blue f letter-facebook logo" />
-          <img src={google} alt="multicolored g letter-google logo" />
-          <img src={apple} alt="dark grey hidden apple apple logo" />
-        </div>
-        <p>OR</p>
-        <form
-          onSubmit={() => {
-            handleSubmit();
-          }}
-        >
-          <label>
-            Username or Email
-            <input
-              type={"text" || "email"}
-              placeholder="Username or Email"
-              value={username || email}
-              onChange={(event) => {
-                setUsername(event.target.value) || setEmail(event.target.value);
-              }}
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type={passwordVisibility === true ? "text" : "password"}
-              placeholder="password"
-              value={password}
-              onChange={(event) => {
-                setPassword(event.target.value);
-              }}
-            />
-          </label>
-
-          <div className="mem-password">
-            <label>
-              <input type="checkbox" value={() => setChecked(!checked)} />
-              Remember me
-            </label>
-            <p>Forgot Password?</p>
-          </div>
-          <input type="submit" value="Login" />
-        </form>
+    <div className="login-signup-wrapper">
+      <div className="social">
+        <img src={facebook} alt="blue f letter-facebook logo" />
+        <img src={google} alt="multicolored g letter-google logo" />
+        <img src={apple} alt="dark grey hidden apple apple logo" />
       </div>
+      <p>OR</p>
+
+      <form
+        onSubmit={() => {
+          handleSubmit();
+        }}
+      >
+        <label>
+          Username or Email <br />
+          <input
+            type={"text" || "email"}
+            placeholder="Username or Email"
+            value={username || email}
+            onChange={(event) => {
+              setUsername(event.target.value) || setEmail(event.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Password <br />
+          <input
+            type={passwordVisibility === true ? "text" : "password"}
+            placeholder="password"
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
+        </label>
+
+        <div className="mem-password">
+          <label>
+            <input type="checkbox" value={() => setChecked(!checked)} />
+            Remember me
+          </label>
+          <p>Forgot Password?</p>
+        </div>
+        <input className="submit-login" type="submit" value="Login" />
+      </form>
     </div>
   );
 }

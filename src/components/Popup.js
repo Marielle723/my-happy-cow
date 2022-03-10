@@ -4,13 +4,16 @@ import Signup from "./Signup";
 import Login from "./Login";
 
 import loginbg from "../assets/login-social.jpg";
+import { IoClose } from "react-icons/io5";
 
 function Popup() {
   const [login, setLogin] = useState(true);
   const [signup, setSignup] = useState(false);
+  const [close, setClose] = useState(false);
 
   return (
     <div className="popup-wrapper">
+      <IoClose className="cross" />
       <div
         className="popup-imgbg"
         style={{ backgroundImage: `url(${loginbg})` }}

@@ -1,6 +1,7 @@
 import mondaybg from "../assets/monday.png";
 import thuesdaybg from "../assets/thuesday.webp";
 import wednesdaybg from "../assets/wednesday.webp";
+import thursdaybg from "../assets/thursday.webp";
 
 import { FaSearch } from "react-icons/fa";
 // import formebanner from "../assets/formebanner.svg";
@@ -17,13 +18,13 @@ const Banner = () => {
           : new Date().getDay() === 3
           ? { backgroundImage: `url(${wednesdaybg})` }
           : new Date().getDay() === 4
-          ? { backgroundImage: `url(${thuesdaybg})` }
+          ? { backgroundImage: `url(${thursdaybg})` }
           : new Date().getDay() === 5
-          ? { backgroundImage: `url(${thuesdaybg})` }
+          ? { backgroundImage: `url(${mondaybg})` }
           : new Date().getDay() === 6
-          ? { backgroundImage: `url(${thuesdaybg})` }
+          ? { backgroundImage: `url(${mondaybg})` }
           : new Date().getDay() === 0
-          ? { backgroundImage: `url(${thuesdaybg})` }
+          ? { backgroundImage: `url(${mondaybg})` }
           : { backgroundImage: `url(${mondaybg})` }
       }
     >

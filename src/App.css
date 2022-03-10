@@ -73,7 +73,7 @@ body {
   width: 100px;
 }
 
-.header nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,8 +146,10 @@ body {
   width: 500px;
   height: 20px;
   padding: 5px;
-  border-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   padding: 15px;
+  border: none;
 }
 
 .banner-shape {
@@ -171,7 +173,7 @@ body {
 
 .banner-search-icon-p {
   background: #7c4ec4;
-  padding: 7px;
+  padding: 6px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }

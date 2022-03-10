@@ -65,7 +65,7 @@ const Card = ({ place }) => {
   return (
     <>
       <div className="card" key={place.placeId}>
-        <Link to={`/place/${place.placeId}`}>
+        <Link to={`/${place.placeId}`}>
           {place.thumbnail ? (
             <img className="card-thumbnail" src={place.thumbnail} alt="foods" />
           ) : (

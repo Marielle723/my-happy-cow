@@ -15,12 +15,8 @@ function Signup() {
   const [checked, setChecked] = useState(false);
 
   const handleSubmit = () => {
-    alert("Submit");
+    // alert("Submit");
     //requête axios vers une route userSignup
-  };
-
-  const togglebtn = () => {
-    setPasswordVisibility(!passwordVisibility);
   };
 
   return (
@@ -31,11 +27,7 @@ function Signup() {
         <img src={apple} alt="dark grey hidden apple apple logo" />
       </div>
       <p>OR</p>
-      <form
-        onSubmit={() => {
-          handleSubmit();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <label>
           Email <br />
           <input
@@ -75,11 +67,15 @@ function Signup() {
             />
 
             {!passwordVisibility ? (
-              <button onClick={togglebtn}>
+              <button
+                onClick={() => setPasswordVisibility(!passwordVisibility)}
+              >
                 <IoEyeOutline />
               </button>
             ) : (
-              <button onClick={togglebtn}>
+              <button
+                onClick={() => setPasswordVisibility(!passwordVisibility)}
+              >
                 <IoEyeOffOutline />
               </button>
             )}

@@ -14,12 +14,8 @@ function Login() {
   const [checked, setChecked] = useState(false);
 
   const handleSubmit = () => {
-    alert("Submit Login");
+    // alert("Submit Login");
     //requête vers user login
-  };
-
-  const togglebtn = () => {
-    setPasswordVisibility(!passwordVisibility);
   };
 
   return (
@@ -31,11 +27,7 @@ function Login() {
       </div>
       <p>OR</p>
 
-      <form
-        onSubmit={() => {
-          handleSubmit();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <label>
           Username or Email <br />
           <input
@@ -60,11 +52,15 @@ function Login() {
             />
 
             {!passwordVisibility ? (
-              <button onClick={togglebtn}>
+              <button
+                onClick={() => setPasswordVisibility(!passwordVisibility)}
+              >
                 <IoEyeOutline />
               </button>
             ) : (
-              <button onClick={togglebtn}>
+              <button
+                onClick={() => setPasswordVisibility(!passwordVisibility)}
+              >
                 <IoEyeOffOutline />
               </button>
             )}

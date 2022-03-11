@@ -62,7 +62,7 @@ const Banner = () => {
 
       {searchList && (
         <div className="searchList">
-          <Link to="/">
+          <Link to="/nearby">
             <p>
               <FaLocationArrow /> Current Location
             </p>

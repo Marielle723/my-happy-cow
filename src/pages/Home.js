@@ -1,9 +1,8 @@
 /* IMPORT GENERAL */
 import react, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import pinkwhiteshape from "../assets/pinkwhiteshape.png";
-import brown from "../assets/brown.png";
 
 /* IMPORT COMPONENTS */
 import Banner from "../components/Banner";

@@ -2,11 +2,19 @@ import React from "react";
 import { useState } from "react";
 import Signup from "./Signup";
 import Login from "./Login";
+import { useLocation } from "react-router-dom";
 
 import loginbg from "../assets/login-social.jpg";
 import { IoClose } from "react-icons/io5";
 
 function Popup(props) {
+  let location = useLocation();
+  console.log(location);
+
+  if (location.pathname === "/nearby") {
+    props.setTrigger(false);
+  }
+
   const [login, setLogin] = useState(true);
   const [signup, setSignup] = useState(false);
   const [close, setClose] = useState(false);

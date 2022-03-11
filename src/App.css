@@ -498,7 +498,7 @@ form {
   /* background: pink; */
 }
 
-.password-field button {
+.password-field div {
   height: 15px;
   margin-top: 6px;
   border: none;
@@ -625,4 +625,22 @@ input {
   background: #7c4ec4;
   color: #fff;
   margin-left: -50px;
+}
+
+/* NEARBY WRAPPER */
+
+.nearby-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nearby-food {
+  width: 70%;
+  border: orange 5px solid;
+}
+
+.leaflet-container {
+  width: 30%;
+  height: 70vh;
+  margin-right: 10px;
 }

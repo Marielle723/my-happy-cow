@@ -67,17 +67,13 @@ function Signup() {
             />
 
             {!passwordVisibility ? (
-              <button
-                onClick={() => setPasswordVisibility(!passwordVisibility)}
-              >
+              <div onClick={() => setPasswordVisibility(!passwordVisibility)}>
                 <IoEyeOutline />
-              </button>
+              </div>
             ) : (
-              <button
-                onClick={() => setPasswordVisibility(!passwordVisibility)}
-              >
+              <div onClick={() => setPasswordVisibility(!passwordVisibility)}>
                 <IoEyeOffOutline />
-              </button>
+              </div>
             )}
           </div>
         </label>

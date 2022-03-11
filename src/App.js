@@ -13,6 +13,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import AddListing from "./pages/AddListing";
 import SearchScreen from "./pages/SearchScreen";
+import Nearby from "./pages/Nearby";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/searchScreen" element={<SearchScreen />} />
         <Route path="/addListing" element={<AddListing />} />
+        <Route path="/nearby" element={<Nearby />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

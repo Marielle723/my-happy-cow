@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-import Popup from "./Popup";
+import PopupLog from "./PopupLog";
 
 import Dropdown from "../components/Dropdown";
 import DropdownMore from "./DropdownMore";
@@ -115,7 +115,7 @@ const Header = () => {
             Login / Join
           </p>
 
-          <Popup trigger={trigger} setTrigger={setTrigger} />
+          <PopupLog trigger={trigger} setTrigger={setTrigger} />
         </div>
       </div>
     </>

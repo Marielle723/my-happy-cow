@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -11,10 +12,18 @@ import Dropdown from "../components/Dropdown";
 import DropdownMore from "./DropdownMore";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [menuClick, setMenuClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownMore, setDropdownMore] = useState(false);
   const [trigger, setTrigger] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTrigger(true);
+    }, 5000);
+  }, []);
 
   const handleClickMenu = () => {
     setMenuClick(!menuClick);
@@ -87,7 +96,10 @@ const Header = () => {
         </div>
 
         <div className="header-right">
-          <p className="header-search-icon">
+          <p
+            className="header-search-icon"
+            onClick={() => navigate("/searchScreen")}
+          >
             <FaSearch />
           </p>
           <Link to="/addListing">

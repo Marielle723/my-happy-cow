@@ -5,7 +5,7 @@ import facebook from "../assets/social/facebook.png";
 import google from "../assets/social/google.png";
 import apple from "../assets/social/apple.png";
 
-import { IoClose } from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -17,6 +17,10 @@ function Signup() {
   const handleSubmit = () => {
     alert("Submit");
     //requête axios vers une route userSignup
+  };
+
+  const togglebtn = () => {
+    setPasswordVisibility(!passwordVisibility);
   };
 
   return (
@@ -60,14 +64,26 @@ function Signup() {
         </p>
         <label>
           Password
-          <input
-            type={passwordVisibility === true ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-          />
+          <div className="password-field">
+            <input
+              type={passwordVisibility === true ? "text" : "password"}
+              placeholder="password"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+
+            {!passwordVisibility ? (
+              <button onClick={togglebtn}>
+                <IoEyeOutline />
+              </button>
+            ) : (
+              <button onClick={togglebtn}>
+                <IoEyeOffOutline />
+              </button>
+            )}
+          </div>
         </label>
         <div className="mem-password">
           <label>

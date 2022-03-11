@@ -1,12 +1,22 @@
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import mondaybg from "../assets/monday.png";
 import thuesdaybg from "../assets/thuesday.webp";
 import wednesdaybg from "../assets/wednesday.webp";
 import thursdaybg from "../assets/thursday.webp";
+import fridaybg from "../assets/friday.webp";
 
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaLocationArrow, FaPlane } from "react-icons/fa";
+import { useState, useRef } from "react";
 // import formebanner from "../assets/formebanner.svg";
 
 const Banner = () => {
+  const [searchList, setSearchList] = useState(false);
+  // const [outsideClick, setOutsideClick] = useState(false);
+
+  // let inputref = useRef();
+
   return (
     <div
       className="banner"
@@ -20,7 +30,7 @@ const Banner = () => {
           : new Date().getDay() === 4
           ? { backgroundImage: `url(${thursdaybg})` }
           : new Date().getDay() === 5
-          ? { backgroundImage: `url(${mondaybg})` }
+          ? { backgroundImage: `url(${fridaybg})` }
           : new Date().getDay() === 6
           ? { backgroundImage: `url(${mondaybg})` }
           : new Date().getDay() === 0
@@ -34,13 +44,37 @@ const Banner = () => {
           name="search"
           type="text"
           placeholder="Search for city, region, or zipcode"
+          onClick={() => {
+            setSearchList(true);
+          }}
+          onMouseDown={() => {
+            setSearchList(false);
+          }}
+
           //   value="{value}"
           // onChange="{function}"
         />
+
         <p className="banner-search-icon-p">
           <FaSearch />
         </p>
       </div>
+
+      {searchList && (
+        <div className="searchList">
+          <Link to="/">
+            <p>
+              <FaLocationArrow /> Current Location
+            </p>
+          </Link>
+
+          <Link to="/">
+            <p>
+              <FaPlane /> Browse the world
+            </p>
+          </Link>
+        </div>
+      )}
       <p className="banner-ref">Photo by Rustic Vegan</p>
       {/* <img className="wave-form" alt="wave form white" src={formebanner} /> */}
     </div>

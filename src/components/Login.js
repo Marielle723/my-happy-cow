@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 import facebook from "../assets/social/facebook.png";
 import google from "../assets/social/google.png";
@@ -16,6 +16,10 @@ function Login() {
   const handleSubmit = () => {
     alert("Submit Login");
     //requête vers user login
+  };
+
+  const togglebtn = () => {
+    setPasswordVisibility(!passwordVisibility);
   };
 
   return (
@@ -45,14 +49,26 @@ function Login() {
         </label>
         <label>
           Password <br />
-          <input
-            type={passwordVisibility === true ? "text" : "password"}
-            placeholder="password"
-            value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-          />
+          <div className="password-field">
+            <input
+              type={passwordVisibility === true ? "text" : "password"}
+              placeholder="password"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
+
+            {!passwordVisibility ? (
+              <button onClick={togglebtn}>
+                <IoEyeOutline />
+              </button>
+            ) : (
+              <button onClick={togglebtn}>
+                <IoEyeOffOutline />
+              </button>
+            )}
+          </div>
         </label>
 
         <div className="mem-password">

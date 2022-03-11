@@ -157,6 +157,26 @@ body {
   border: none;
 }
 
+.searchList {
+  width: 520px;
+  background: #fff;
+  color: #7c4ec4;
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+.searchList p {
+  color: #7c4ec4;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.searchList p:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 .banner-shape {
   width: 100%;
   object-position: right;
@@ -181,6 +201,12 @@ body {
   padding: 6px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  margin-top: 5px;
+}
+
+.banner-search-icon-p:hover {
+  opacity: 0.75;
+  cursor: pointer;
 }
 
 .banner-title {
@@ -467,6 +493,18 @@ form {
   line-height: 24px;
 }
 
+.password-field {
+  display: flex;
+  /* background: pink; */
+}
+
+.password-field button {
+  height: 15px;
+  margin-top: 6px;
+  border: none;
+  margin-left: -15px;
+}
+
 .mem-password {
   display: flex;
   justify-content: space-between;
@@ -551,4 +589,40 @@ input {
 
 .addListing-bg {
   color: white;
+}
+
+/* SEARCHSCREE */
+
+.searchScreen-wrapper {
+  width: 90%;
+}
+
+.searchScreen-wrapper h2 {
+  font-size: 1.2rem;
+  color: #292929;
+}
+
+.searchScreen-wrapper ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchScreen-wrapper ul li {
+  color: #292929;
+  font-size: 0.6rem;
+}
+
+.searchScreen-wrapper ul li:active {
+  color: #7c4ec4;
+  font-size: 0.6rem;
+}
+
+.searchScreen-wrapper input {
+  width: 100%;
+}
+
+.searchScreen-wrapper button {
+  background: #7c4ec4;
+  color: #fff;
+  margin-left: -50px;
 }
